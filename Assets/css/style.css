@@ -1,0 +1,26 @@
+body{
+background-color: black;
+}
+
+h1, h3{
+  font-family: 'Futura';
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff7300, 0 0 30px #ff7300, 0 0 40px #ff7300, 0 0 55px #ff7300, 0 0 75px #ff7300;
+  text-align: center;
+  }
+
+.content{
+    margin-top: 10px;
+    border: 3px dashed white;
+    color: white;
+    height: 500px;
+  }
+
+  .game-info{
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .start-reset-button{
+    margin-bottom: 20px;
+  }
