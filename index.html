@@ -15,29 +15,31 @@
 
   <header>
     <h1>Let's Get Ready To Rumble!</h1>
-    <h3>Hangman WWF Style</h3>
+    <h3>Hangman... WWF Style!</h3>
   </header>
 
   <div class="container">
     <div class="row">
       <div class="col-md-3"></div>
-      <div class="col-md-3 content" id="win-lose-screen">
-        <p>Test</p>
-      </div>
       <div class="col-md-3 content">
+        <div id="win-lose-message"></div>
+        <div id="win-lose-screen"></div>
+        <div id="win-lose-text"></div>
+      </div>
+      <div class="col-md-4 content">
+          <div class="start-reset">
+              <a href="#" role="button" class="start-reset-button" id="instructions">Click Here to Start!</a>
+            </div>
         <div class="game-info">
-          <div class="start-reset-button">
-            <a href="#" role="button" class="btn btn-default" id="instructions">Click Here to Start!</a>
-          </div>
           <p>Wins: <span id="win-count"></span></p>
-          <p>Current Word</p>
+          <p>Current Word: </p>
           <p id="current-word"></p>
           <p>Guesses Remaining: <span id="guesses-left"></span></p>
           <p>Letters Already Guessed: </p>
           <div id="letters-guessed"></div>
         </div>
       </div>
-      <div class="col-md-3"></div>
+      <div class="col-md-2"></div>
     </div>
   </div>
 
