@@ -55,7 +55,6 @@ startGame.onclick = function () {
   }
   // displays the wrestler name as underscores on the document
   currentWord.textContent = hiddenWord.join(" ");
-  console.log(grabWord);
 
   // logs user choice on key up
   document.onkeyup = function (event) {
