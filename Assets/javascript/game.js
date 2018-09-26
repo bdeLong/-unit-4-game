@@ -21,13 +21,12 @@ var guessedLettersContainer = document.getElementById("letters-guessed");
 var winLossMessage = document.getElementById("win-lose-message");
 var winLossStory = document.getElementById("win-lose-text");
 
-
 startGame.onclick = function () {
-  // sets up wins, guesses, rest button, etc for game start
+  // sets up wins, guesses, rest button, etc for game start on click
   var guessedLetters = [];
   var winCountStop = 0;
-  winLossScreen.setAttribute("src", "");
-  winLossMessage.innerHTML = "";
+  winLossScreen.setAttribute("src", "Assets/images/Wrestler idle.gif");
+  winLossMessage.innerHTML = "Start Guessing, Brother!";
   winLossStory.innerHTML = "";
   // removes focus from reset button so if "ENTER" is pushed, the game does not reset.
   startGame.blur();
@@ -65,17 +64,17 @@ startGame.onclick = function () {
       alert("Please press a letter");
     }
 
-    // checks if userGuess is not in word and not guessed already.  decremnts guessesLeft by 1.
-    if (grabWord.indexOf(userGuess) === -1 && guessedLetters.indexOf(userGuess) === -1 && guessesLeft > 0 && hiddenWord.join('') !== grabWord && validInputs.indexOf(userGuess) < 52 && validInputs.indexOf(userGuess) > -1) {
+     // checks if userGuess is not in word and not guessed already.  decremnts guessesLeft by 1.
+     if (grabWord.indexOf(userGuess) === -1 && guessedLetters.indexOf(userGuess) === -1 && guessesLeft > 0 && hiddenWord.join('') !== grabWord && validInputs.indexOf(userGuess) < 52 && validInputs.indexOf(userGuess) > -1) {
       guessesLeft--;
     }
 
-    // pushes userGuess to guessedLetters array if it's a newly guessed letter
-    if (guessedLetters.indexOf(userGuess) === -1 && validInputs.indexOf(userGuess) > -1 && validInputs.indexOf(userGuess) < 52 && guessesLeft > 0 && hiddenWord.join('') !== grabWord) {
+     // pushes userGuess to guessedLetters array if it's a newly guessed letter
+     if (guessedLetters.indexOf(userGuess) === -1 && validInputs.indexOf(userGuess) > -1 && validInputs.indexOf(userGuess) < 52 && guessesLeft > 0 && hiddenWord.join('') !== grabWord) {
       guessedLetters.push(userGuess);
       guessedLettersContainer.textContent = guessedLetters.join(",\xa0 ");
     }
-    
+
     // if user guesses a letter that is in the word, replace underscore with the correct letter
     for (var i = 0; i < grabWord.length; i++) {
       if (grabWord[i] === " ") {
@@ -84,7 +83,6 @@ startGame.onclick = function () {
       else if (userGuess === grabWord[i] && guessesLeft > 0) {
         hiddenWord[i] = grabWord[i];
         currentWord.textContent = hiddenWord.join("\xa0");
-        guessedLettersContainer.textContent = guessedLetters.join(",\xa0 ");
       }
     }
 
